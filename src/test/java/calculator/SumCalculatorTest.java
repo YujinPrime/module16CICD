@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class SumCalculatorTest {
     private SumCalculator sumCalculator;
@@ -26,8 +27,8 @@ class SumCalculatorTest {
         }
     }
 
-//    @Test
-//    void sumZero() {
-//        assertThrows(IllegalArgumentException.class, () -> sumCalculator.sum(0));
-//    }
+    @Test
+    void sumZero() {
+        assertThrows(IllegalArgumentException.class, () -> sumCalculator.sum(0));
+    }
 }
